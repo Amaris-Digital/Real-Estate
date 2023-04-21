@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'property/property_type'
+  get 'property/address'
+  get 'property/description'
+  get 'property/price'
+  get 'property/image'
   # config/routes.rb
   namespace :api do
     namespace :v1 do
