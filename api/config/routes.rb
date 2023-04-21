@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :favourites
   resources :reviews
   get 'property/property_type'
   get 'property/address'
