@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_04_21_090202) do
+ActiveRecord::Schema[7.0].define(version: 2023_04_16_160144) do
   create_table "favourites", force: :cascade do |t|
-    t.integer "user_id", null: false
     t.integer "property_id", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["property_id"], name: "index_favourites_on_property_id"
@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_090202) do
     t.string "property_type"
     t.string "address"
     t.string "description"
-    t.string "price"
+    t.integer "price"
     t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -32,10 +32,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_090202) do
 
   create_table "reviews", force: :cascade do |t|
     t.string "message"
-    t.integer "Property_id", null: false
+    t.integer "property_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["Property_id"], name: "index_reviews_on_Property_id"
+    t.index ["property_id"], name: "index_reviews_on_property_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -48,5 +48,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_21_090202) do
 
   add_foreign_key "favourites", "properties"
   add_foreign_key "favourites", "users"
-  add_foreign_key "reviews", "Properties"
+  add_foreign_key "reviews", "properties"
 end
