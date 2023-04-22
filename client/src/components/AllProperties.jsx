@@ -15,7 +15,7 @@ const AllProperties = () => {
         return (
           <Link to={`/property/${property.id}`}>
             <div key={property.id}>
-              <h1>{property.name}</h1>
+              <h1 className="">{property.name}</h1>
               <p>{property.description}</p>
               <p>{property.price}</p>
             </div>

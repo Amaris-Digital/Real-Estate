@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FcGoogle } from "react-icons/fc";
+import { BsApple } from "react-icons/bs";
+import "./Login.css";
 
 function Login({ setStoredToken }) {
   const [username, setUsername] = useState("");
@@ -37,31 +40,59 @@ function Login({ setStoredToken }) {
     setPassword("");
   };
   return (
-    <div className="App">
-      <h1>Create new user</h1>
-      <form>
-        <label>
-          Username:
-          <input
-            type="text"
-            name="name"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-        </label>
+    <>
+      <div className="hero">
+        <div className="bg-black bg-opacity-90 w-[50%]">
+          <h1 className="text-center text-white pt-24 text-4xl">
+            Welcome Back!
+          </h1>
+          <form className="flex flex-col">
+            <input
+              className=" bg-black bg-opacity-90 p-2 mt-10 mx-36 border-2 border-[#aaa] rounded-3xl"
+              type="text"
+              name="name"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Username"
+            />
 
-        <label>
-          Password:
-          <input
-            type="text"
-            name="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </label>
-        <button onClick={handleSubmit}>Submit</button>
-      </form>
-    </div>
+            <input
+              className=" bg-black bg-opacity-90 p-2 mt-4 mx-36 border-2 border-[#aaa] rounded-3xl"
+              type="text"
+              name="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Password"
+            />
+            <button
+              className="text-white bg-[#0d5b72] mx-auto mt-7 rounded-3xl p-3 w-80"
+              onClick={handleSubmit}
+            >
+              Log In
+            </button>
+            <button
+              className="text-[#bbb] border-2 border-[#aaa]  w-80 mx-auto mt-7 rounded-3xl p-3"
+              onClick={handleSubmit}
+            >
+              <div className="flex align-center justify-center">
+                <FcGoogle size={25} />
+                <span className="ml-2">Log In with Google</span>
+              </div>
+            </button>
+
+            <button
+              className="text-[#bbb] border-2 border-[#aaa]  w-80 mx-auto mt-7 rounded-3xl p-3"
+              onClick={handleSubmit}
+            >
+              <div className="flex align-center justify-center">
+                <BsApple size={25} />
+                <span className="ml-2">Log In with Google</span>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 
