@@ -42,13 +42,13 @@ function Login({ setStoredToken }) {
   return (
     <>
       <div className="hero">
-        <div className="bg-black bg-opacity-90 w-[50%]">
+        <div className="bg-black bg-opacity-80 w-[100%] md:w-[50%]">
           <h1 className="text-center text-white pt-24 text-4xl">
             Welcome Back!
           </h1>
           <form className="flex flex-col">
             <input
-              className=" bg-black bg-opacity-90 p-2 mt-10 mx-36 border-2 border-[#aaa] rounded-3xl"
+              className=" bg-black bg-opacity-90 p-2 mt-10 mx-9 md:mx-36 border-2 border-[#aaa] rounded-3xl"
               type="text"
               name="name"
               value={username}
@@ -57,7 +57,7 @@ function Login({ setStoredToken }) {
             />
 
             <input
-              className=" bg-black bg-opacity-90 p-2 mt-4 mx-36 border-2 border-[#aaa] rounded-3xl"
+              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl"
               type="text"
               name="password"
               value={password}
