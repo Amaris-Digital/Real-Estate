@@ -12,7 +12,7 @@ property = Property.create([
         address: "123 Fake Street",
         description: "This is a fake house",
         price: 100000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8aG91c2VzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
     },
 
     {
@@ -20,7 +20,7 @@ property = Property.create([
         address: "456 Fake Street",
         description: "This is a fake apartment",
         price: 50000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
 
     {
@@ -28,7 +28,7 @@ property = Property.create([
         address: "789 Fake Street",
         description: "This is a fake house",
         price: 100000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+        image: "https://images.unsplash.com/photo-1600566753104-685f4f24cb4d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTR8fGhvdXNlc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
     },
 ]
 

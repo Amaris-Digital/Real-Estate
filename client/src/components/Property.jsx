@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { GoLocation } from "react-icons/go";
 
-const Property = ({loggedInUserId}) => {
+const Property = ({ loggedInUserId }) => {
   const { id } = useParams();
   const [property, setProperty] = useState({});
   useEffect(() => {
@@ -13,8 +14,21 @@ const Property = ({loggedInUserId}) => {
       });
   }, [id]);
   return (
-    <div>
-      <h1>{property.description}</h1>
+    <div className="p-6">
+      <img
+        className="w-full h-[600px] object-cover rounded-lg"
+        src={property.image}
+        alt={property.name}
+      />
+      <div>
+        <div>
+          <h1 className="text-3xl font-bold">{property.description}</h1>
+          <div className="flex items-center">
+            <GoLocation size={25} />
+            <p className="text-xl">{property.address}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
