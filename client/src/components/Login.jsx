@@ -48,7 +48,7 @@ function Login({ setStoredToken }) {
           </h1>
           <form className="flex flex-col">
             <input
-              className=" bg-black bg-opacity-90 p-2 mt-10 mx-9 md:mx-36 border-2 border-[#aaa] rounded-3xl"
+              className=" bg-black bg-opacity-90 p-2 mt-10 mx-9 md:mx-36 border-2 border-[#aaa] rounded-3xl text-[#bbb]"
               type="text"
               name="name"
               value={username}
@@ -57,8 +57,8 @@ function Login({ setStoredToken }) {
             />
 
             <input
-              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl"
-              type="text"
+              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl text-[#bbb]"
+              type="password"
               name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
