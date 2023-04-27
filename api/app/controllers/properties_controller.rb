@@ -1,7 +1,7 @@
 class PropertiesController < ApplicationController
     skip_before_action :authorized
     def index
-        @properties = Property.all
+        @properties = Property.limit(params[:limit]).offset(params[:offset])
         render json: @properties
     end
 
@@ -32,4 +32,6 @@ class PropertiesController < ApplicationController
     def property_params
         params.permit(:property_type, :address, :description, :price, :image)
     end
+
+
 end

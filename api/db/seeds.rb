@@ -7,45 +7,145 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
 property = Property.create([
+   {
+    id: 1,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "Red Carpet Real Estate",
+    address: "Kilimani, Nairobi",
+    price: 29000000,
+    price_per_day: 6000,
+    price_per_week: 35000,
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    size: "2000",
+    description: "This is a three bedroom apartment located in Kilimani, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+    property_type: "Apartment"
+        
+    },
     {
-        property_type: "House",
-        address: "123 Fake Street",
-        description: "This is a fake house",
-        price: 100000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
+    id: 2,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "Fairmount Properties",
+    address: "Ruaka, Nairobi",
+    price: 45000000,
+    price_per_day: 5000,
+    price_per_week: 30000,
+    size: "2000",
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    description: "This is a three bedroom apartment located in Ruaka, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+
+    property_type: "Condos",
+    },
+    {
+    id: 3,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "The Real Estate Corner",
+    address: "Kileleshwa, Nairobi",
+    price: 47000000,
+    price_per_day: "7,000",
+    price_per_week: "40,000",
+    size: "2000",
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    description: "This is a three bedroom apartment located in Kileleshwa, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+    property_type: "Apartment"
+    },
+    {
+    id: 4,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "Herringbone Realty",
+    address: "Parklands, Nairobi",
+    property_type: "Villa",
+    price_per_day: "7540",
+    price: 35000000,
+    price_per_week: "40,000",
+    size: "2000",
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    description: "This is a three bedroom apartment located in Parklands, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+    },
+    {
+    id: 5,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "Brick Lane Realty",
+    address: "Loresho, Nairobi",
+    price: 20000000,
+    price_per_day: "7,000",
+    price_per_week: "40,000",
+    size: "2000",
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    description: "This is a three bedroom apartment located in Loresho, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+    property_type: "Apartment"
+    },
+    {
+    id: 6,
+    image: "https://res.cloudinary.com/dakiak4mc/image/upload/v1680716041/r-architecture-MAnVoJlQUvg-unsplash_f6dlmw.jpg",
+    name: "Banyon Tree Realty",
+    address: "Kitisuru, Nairobi",
+    price: 47200000,
+    price_per_day: "7,000",
+    price_per_week: "40,000",
+    size: "2000",
+    bedrooms: "3",
+    bathrooms: "2",
+    parking: "2",
+    property_type: "Apartment",
+    description: "This is a three bedroom apartment located in Kitisuru, Nairobi. It is a spacious apartment with a large living room and a balcony. It has a spacious kitchen with a pantry. The master bedroom is ensuite and has a bathtub. The other two bedrooms share a bathroom. The apartment has a laundry area. It is located in a secure compound with 24-hour security. It is close to Yaya Centre, Adlife Plaza, and Prestige Plaza.
+    ",
+
+
     },
 
-    {
-        property_type: "Apartment",
-        address: "456 Fake Street",
-        description: "This is a fake apartment",
-        price: 50000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
-    },
-
-    {
-        property_type: "House",
-        address: "789 Fake Street",
-        description: "This is a fake house",
-        price: 100000,
-        image: "https://images.unsplash.com/photo-1586441170929-8e1b5b5b5f0d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aG91c2UlMjBjb2xvcmF0aW9uJTIwY29sb3J8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
-    },
 ]
 
 )
 
-user = User.create([
-    {
-        username: "test",
-        password: "test",
-        email: "test@email.com"
-    },
-    {
-        username: "test2",
-        password: "test2",
-        email: "test2"
-    }
-])
+puts "Seding admin"
+
+    User.create(
+        username: "admin",
+        password: "admin",
+        phone_number: "0700234543",
+        email: "admin@gmail.com",
+        role: "admin",
+        first_name: "admin",
+        last_name: "admin",
+    )
+
+
+    puts "seeding users"
+
+
+    User.create(
+        username: "user1",
+        password: "123456",
+        phone_number: "070004543",
+        email: "userone@gmail.com",
+        first_name: "user",
+        last_name: "tow",
+    )
+
+
+    User.create(
+        username: "user2",
+        password: "123456",
+        phone_number: "070004543",
+        email: "usertwo@gmail.com",
+        first_name: "user",
+        last_name: "two",
+    )
 
 review = Review.create([
     {
@@ -61,12 +161,14 @@ review = Review.create([
 favourite = Favourite.create([
     {
         property_id: 1,
-        user_id: 1
+        user_id: 2,
+        move_in_date: "2021-09-01",
     },
 
     {
         property_id: 2,
-        user_id: 1
+        user_id: 2,
+        move_in_date: "2021-09-01",
     },
 ])
 

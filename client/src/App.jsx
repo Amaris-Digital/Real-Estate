@@ -5,10 +5,16 @@ import Hello from "./components/Home";
 import Login from "./components/Login";
 import SplashScreen from "./pages/SplashScreen";
 import Property from "./components/Property";
+import Navbar from "./components/Navbar";
+import Favourites from "./components/Favourites";
+import Home from "./components/Home";
+import AdminDashBoard from "./components/AdminDashboard";
+import AddProperty from "./components/AddProperty";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   const [loggedInUserId, setLoggedInUserId] = useState("");
+  const [loggedInUserRole, setLoggedInUserRole] = useState("");
   useEffect(() => {
     console.log(storedToken);
   }, [storedToken]);
@@ -23,25 +29,41 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setLoggedInUserRole(data.user.role);
         setLoggedInUserId(data.user.id);
+        setLoggedInUserRole(data.user.role);
+        console.log(data.user);
       });
   }, [storedToken]);
 
   return (
     <div>
       <Router>
+        <Navbar
+          setStoredToken={setStoredToken}
+          loggedInUserId={loggedInUserId}
+          loggedInUserRole={loggedInUserRole}
+          storedToken={storedToken}
+        />
         <Routes>
           {storedToken ? (
             <>
-              <Route
-                path="/"
-                element={<Hello setStoredToken={setStoredToken} />}
-              />
+              {loggedInUserRole === "admin" ? (
+                <Route
+                  path="/"
+                  element={<AdminDashBoard loggedInUserId={loggedInUserId} />}
+                />
+              ) : (
+                <Route
+                  path="/"
+                  element={<Home setStoredToken={setStoredToken} />}
+                />
+              )}
               <Route
                 path="/property/:id"
                 element={<Property loggedInUserId={loggedInUserId} />}
               />
+              <Route path="/favorites" element={<Favourites />} />
+              <Route path="/AddProperty" element={<AddProperty />} />
             </>
           ) : (
             <>

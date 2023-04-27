@@ -1,3 +1,3 @@
 class Review < ApplicationRecord
-  belongs_to :Property
+  belongs_to :property
 end
