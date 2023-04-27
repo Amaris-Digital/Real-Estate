@@ -5,6 +5,8 @@ import Hello from "./components/Home";
 import Login from "./components/Login";
 import SplashScreen from "./pages/SplashScreen";
 import Property from "./components/Property";
+import Navbar from "./components/Navbar";
+import Favourites from "./components/Favourites";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -31,6 +33,7 @@ function App() {
   return (
     <div>
       <Router>
+        <Navbar setStoredToken={setStoredToken} />
         <Routes>
           {storedToken ? (
             <>
@@ -42,6 +45,7 @@ function App() {
                 path="/property/:id"
                 element={<Property loggedInUserId={loggedInUserId} />}
               />
+              <Route path="/favorites" element={<Favourites />} />
             </>
           ) : (
             <>

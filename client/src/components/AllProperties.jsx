@@ -10,7 +10,7 @@ const AllProperties = () => {
       .then((data) => setProperties(data));
   }, []);
   return (
-    <div className="grid grid-cols-3 gap-4 ">
+    <div className="grid grid-cols-3 gap-4 p-6 ">
       {properties.map((property) => {
         return (
           <Link to={`/property/${property.id}`} key={property.id}>

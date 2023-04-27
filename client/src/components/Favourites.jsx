@@ -1,0 +1,43 @@
+import React, { useEffect, useState } from "react";
+
+const Favourites = () => {
+  const [favourites, setFavourites] = useState([]);
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:3000/favourites", {
+      method: "GET",
+      headers: {
+        Accepts: "application/json",
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.token}`,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        setFavourites(data);
+        console.log(data);
+      });
+  }, []);
+
+  return (
+    <div>
+      <h1>Favourites</h1>
+      {favourites.map((favourite) => {
+        {
+          console.log(favourite);
+        }
+        return (
+          <div key={favourite.property.id}>
+            <h1>{favourite.property.name}</h1>
+            <img src={favourite.property.image} alt={favourite.name} />
+            <p>{favourite.property.description}</p>
+            <p>{favourite.property.price}</p>
+            <p>{favourite.property.address}</p>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+export default Favourites;
