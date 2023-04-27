@@ -184,8 +184,8 @@ const AddProperty = () => {
                       placeholder="Enter house name"
                       value={price_per_day}
                       onChange={(e) => setPrice_per_day(e.target.value)}
+                      required
                     />
-                    required
                   </div>
                 </div>
 
@@ -239,22 +239,6 @@ const AddProperty = () => {
 
                 <div>
                   <label className="block text-sm font-medium te/xt-gray-700">
-                    Name
-                  </label>
-                  <div className="mt-1">
-                    <input
-                      type={"text"}
-                      className=" border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                      placeholder="Enter house name"
-                      value={property_type}
-                      onChange={(e) => setProperty_type(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium te/xt-gray-700">
                     Description of the product
                   </label>
                   <div className="mt-1">
@@ -292,14 +276,14 @@ const AddProperty = () => {
                   name !== "" ? (
                     <button
                       type="submit"
-                      className=" text-center rounded-md border border-transparent  bg-orange-400 py-2 px-4  font-bold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className=" text-center rounded-md border border-transparent  bg-blue-600 py-2 px-4  font-bold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       Add Product
                     </button>
                   ) : (
                     <button
                       type="button"
-                      className=" text-center rounded-md border border-transparent  bg-orange-400 py-2 px-4  font-bold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+                      className=" text-center rounded-md border border-transparent  bg-blue-600 py-2 px-4  font-bold text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                     >
                       Add Your Product Details
                     </button>

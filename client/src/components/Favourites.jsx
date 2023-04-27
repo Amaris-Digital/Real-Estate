@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { BsCashCoin } from "react-icons/bs";
 
 const Favourites = () => {
   const [favourites, setFavourites] = useState([]);
@@ -25,12 +26,19 @@ const Favourites = () => {
       <div className="grid grid-cols-3 gap-4 p-6">
         {favourites.map((favourite) => {
           return (
-            <div key={favourite.property.id}>
-              <h1>{favourite.property.name}</h1>
+            <div className="bg-slate-100" key={favourite.property.id}>
               <img src={favourite.property.image} alt={favourite.name} />
-              <p>{favourite.property.description}</p>
-              <p>{favourite.property.price}</p>
-              <p>{favourite.property.address}</p>
+              <div className="p-4">
+                <h1 className="text-4xl font-bold pt-2">
+                  {favourite.property.name}
+                </h1>
+                <div className="flex pt-4 text-center">
+                  <BsCashCoin className="mt-2 mr-3" size={25} />
+                  <p className="text-2xl">{favourite.property.price}</p>
+                </div>
+                <p className="mt-2">{favourite.property.description}</p>
+                <p>{favourite.property.address}</p>
+              </div>
             </div>
           );
         })}

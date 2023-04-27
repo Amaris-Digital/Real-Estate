@@ -5,6 +5,9 @@ import { BsApple } from "react-icons/bs";
 function SignUp({ setStoredToken }) {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [phone_number, setPhoneNumber] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -20,6 +23,9 @@ function SignUp({ setStoredToken }) {
           username,
           email,
           password,
+          phone_number,
+          first_name,
+          last_name,
         },
       }),
     })
@@ -49,6 +55,7 @@ function SignUp({ setStoredToken }) {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               placeholder="Username"
+              required
             />
 
             <input
@@ -58,6 +65,35 @@ function SignUp({ setStoredToken }) {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
+              required
+            />
+            <input
+              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl text-[#bbb]"
+              type="number"
+              name="phone"
+              value={phone_number}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              placeholder="Phone Number"
+              required
+            />
+
+            <input
+              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl text-[#bbb]"
+              type="text"
+              name="first_name"
+              value={first_name}
+              onChange={(e) => setFirstName(e.target.value)}
+              placeholder="First Name"
+              required
+            />
+            <input
+              className=" bg-black bg-opacity-90 p-2 mx-9 mt-4 md:mx-36 border-2 border-[#aaa] rounded-3xl text-[#bbb]"
+              type="text"
+              name="last_name"
+              value={last_name}
+              onChange={(e) => setLastName(e.target.value)}
+              placeholder="Last Name"
+              required
             />
 
             <input
@@ -67,12 +103,13 @@ function SignUp({ setStoredToken }) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
+              required
             />
             <button
               className="text-white bg-[#0d5b72] mx-auto mt-7 rounded-3xl p-3 w-80"
               onClick={handleSubmit}
             >
-              Log In
+              Sign Up
             </button>
             <button
               className="text-[#bbb] border-2 border-[#aaa]  w-80 mx-auto mt-7 rounded-3xl p-3 "
@@ -95,42 +132,6 @@ function SignUp({ setStoredToken }) {
             </button>
           </form>
         </div>
-      </div>
-
-      <div className="App">
-        <h1>Create new user</h1>
-        <form>
-          <label>
-            Username:
-            <input
-              type="text"
-              name="name"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="text"
-              name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </label>
-          <label>
-            Password:
-            <input
-              type="text"
-              name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </label>
-          <button onClick={handleSubmit}>Submit</button>
-        </form>
-        <p>Already have an account?</p>
-        <Link to="/login">Login</Link>
       </div>
     </>
   );
