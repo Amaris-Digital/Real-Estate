@@ -157,14 +157,14 @@ const Property = ({ loggedInUserId }) => {
                   <p>{property.bedrooms}</p>
                 </div>
                 <div className="flex">
-                  <BiBath />
+                  <BiBath size={25} />
                   <p>{property.bathrooms}</p>
                 </div>
                 <div>
-                  <BsFillCarFrontFill />
+                  <BsFillCarFrontFill size={25} />
                 </div>
                 <div className="flex">
-                  <GiResize />
+                  <GiResize size={25} />
                   <p>{property.size}</p>
                 </div>
               </div>
