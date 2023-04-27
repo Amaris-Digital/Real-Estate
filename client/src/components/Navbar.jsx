@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
-const Navbar = () => {
-  const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
+const Navbar = ({
+  loggedInUserId,
+  loggedInUserRole,
+  setStoredToken,
+  storedToken,
+}) => {
+  const navigate = useNavigate();
+  console.log(loggedInUserRole);
 
   const handleLogout = () => {
     localStorage.removeItem("token");
     setStoredToken(null);
+    navigate("/");
   };
 
   return (
@@ -104,6 +112,31 @@ const Navbar = () => {
               Pricing
             </a>
           </li>
+          {loggedInUserRole === "admin" ? (
+            <>
+              <li class="text-gray-300">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  stroke="currentColor"
+                  class="w-4 h-4 current-fill"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 5v0m0 7v0m0 7v0m0-13a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
+                  />
+                </svg>
+              </li>
+              <li>
+                <a class="text-sm text-gray-400 hover:text-gray-500" href="#">
+                  Add property
+                </a>
+              </li>
+            </>
+          ) : null}
         </ul>
 
         {storedToken ? (

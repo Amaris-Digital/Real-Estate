@@ -14,6 +14,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_160144) do
   create_table "favourites", force: :cascade do |t|
     t.integer "property_id", null: false
     t.integer "user_id", null: false
+    t.string "move_in_date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["property_id"], name: "index_favourites_on_property_id"
@@ -49,6 +50,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_04_16_160144) do
     t.string "username"
     t.string "password_digest"
     t.string "email"
+    t.string "first_name"
+    t.string "last_name"
+    t.string "role", default: "user"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

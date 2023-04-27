@@ -112,18 +112,37 @@ property = Property.create([
 
 )
 
-user = User.create([
-    {
-        username: "test",
-        password: "test",
-        email: "test@email.com"
-    },
-    {
-        username: "test2",
-        password: "test2",
-        email: "test2"
-    }
-])
+puts "Seding admin"
+
+    User.create(
+        username: "admin",
+        password: "admin",
+        email: "admin@gmail.com",
+        role: "admin",
+        first_name: "admin",
+        last_name: "admin",
+    )
+
+
+    puts "seeding users"
+
+
+    User.create(
+        username: "user1",
+        password: "123456",
+        email: "userone@gmail.com",
+        first_name: "user",
+        last_name: "tow",
+    )
+
+
+    User.create(
+        username: "user2",
+        password: "123456",
+        email: "usertwo@gmail.com",
+        first_name: "user",
+        last_name: "two",
+    )
 
 review = Review.create([
     {
@@ -139,12 +158,14 @@ review = Review.create([
 favourite = Favourite.create([
     {
         property_id: 1,
-        user_id: 1
+        user_id: 2,
+        move_in_date: "2021-09-01",
     },
 
     {
         property_id: 2,
-        user_id: 1
+        user_id: 2,
+        move_in_date: "2021-09-01",
     },
 ])
 

@@ -7,10 +7,13 @@ import SplashScreen from "./pages/SplashScreen";
 import Property from "./components/Property";
 import Navbar from "./components/Navbar";
 import Favourites from "./components/Favourites";
+import Home from "./components/Home";
+import AdminDashBoard from "./components/AdminDashboard";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
   const [loggedInUserId, setLoggedInUserId] = useState("");
+  const [loggedInUserRole, setLoggedInUserRole] = useState("");
   useEffect(() => {
     console.log(storedToken);
   }, [storedToken]);
@@ -26,6 +29,7 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         setLoggedInUserId(data.user.id);
+        setLoggedInUserRole(data.user.role);
         console.log(data.user);
       });
   }, [storedToken]);
@@ -33,14 +37,26 @@ function App() {
   return (
     <div>
       <Router>
-        <Navbar setStoredToken={setStoredToken} />
+        <Navbar
+          setStoredToken={setStoredToken}
+          loggedInUserId={loggedInUserId}
+          loggedInUserRole={loggedInUserRole}
+          storedToken={storedToken}
+        />
         <Routes>
           {storedToken ? (
             <>
-              <Route
-                path="/"
-                element={<Hello setStoredToken={setStoredToken} />}
-              />
+              {loggedInUserRole === "admin" ? (
+                <Route
+                  path="/"
+                  element={<AdminDashBoard loggedInUserId={loggedInUserId} />}
+                />
+              ) : (
+                <Route
+                  path="/"
+                  element={<Home setStoredToken={setStoredToken} />}
+                />
+              )}
               <Route
                 path="/property/:id"
                 element={<Property loggedInUserId={loggedInUserId} />}
