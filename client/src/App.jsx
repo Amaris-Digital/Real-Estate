@@ -23,8 +23,8 @@ function App() {
     })
       .then((res) => res.json())
       .then((data) => {
-        setLoggedInUserRole(data.user.role);
         setLoggedInUserId(data.user.id);
+        console.log(data.user);
       });
   }, [storedToken]);
 
