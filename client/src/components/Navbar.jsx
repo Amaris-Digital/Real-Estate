@@ -80,7 +80,7 @@ const Navbar = () => {
               class="text-sm text-gray-400 hover:text-gray-500"
               to="/favorites"
             >
-              Favourites
+              Booked houses
             </Link>
           </li>
           <li class="text-gray-300">

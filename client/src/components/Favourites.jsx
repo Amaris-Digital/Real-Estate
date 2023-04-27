@@ -21,21 +21,20 @@ const Favourites = () => {
 
   return (
     <div>
-      <h1>Favourites</h1>
-      {favourites.map((favourite) => {
-        {
-          console.log(favourite);
-        }
-        return (
-          <div key={favourite.property.id}>
-            <h1>{favourite.property.name}</h1>
-            <img src={favourite.property.image} alt={favourite.name} />
-            <p>{favourite.property.description}</p>
-            <p>{favourite.property.price}</p>
-            <p>{favourite.property.address}</p>
-          </div>
-        );
-      })}
+      <h1 className="text-center text-4xl font-bold">Booked houses</h1>
+      <div className="grid grid-cols-3 gap-4 p-6">
+        {favourites.map((favourite) => {
+          return (
+            <div key={favourite.property.id}>
+              <h1>{favourite.property.name}</h1>
+              <img src={favourite.property.image} alt={favourite.name} />
+              <p>{favourite.property.description}</p>
+              <p>{favourite.property.price}</p>
+              <p>{favourite.property.address}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 };
