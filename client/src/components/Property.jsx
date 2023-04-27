@@ -140,45 +140,48 @@ const Property = ({ loggedInUserId }) => {
           />
           <div className="flex justify-between p-6">
             <div>
-              <h1 className="text-3xl font-bold">{property.description}</h1>
-              <div className="flex items-center">
+              <h1 className="text-3xl font-bold">{property.name}</h1>
+              <div className="flex items-center pt-2">
                 <GoLocation size={25} />
                 <p className="text-xl">{property.address}</p>
               </div>
-              <p>{property.description}</p>
+              <p className="pt-5">{property.description}</p>
             </div>
 
             <div>
-              <h1>Brief info</h1>
-              owner: Real estate agency
-              <div className="flex">
-                <div className="flex">
+              <h1 className="text-xl">Brief info</h1>
+              <p className="text-xl">Property type: {property.property_type}</p>
+              <div className="flex bg-slate-100 justify-between p-2">
+                <div className="flex align-center">
                   <MdOutlineBedroomChild size={25} />
-                  <p>{property.bedrooms}</p>
+                  <p className="ml-2">{property.bedrooms}</p>
                 </div>
-                <div className="flex">
+                <div className="flex align-center">
                   <BiBath size={25} />
-                  <p>{property.bathrooms}</p>
+                  <p className="ml-2">{property.bathrooms}</p>
                 </div>
-                <div>
+                <div className="flex align-center">
                   <BsFillCarFrontFill size={25} />
+                  <p className="ml-2">{property.parking}</p>
                 </div>
-                <div className="flex">
+                <div className="flex align-center">
                   <GiResize size={25} />
-                  <p>{property.size}</p>
+                  <p className="ml-2">{property.size}</p>
                 </div>
               </div>
               <div className="flex justify-between">
                 <div className="mr-6">
                   <p className="text-xl">1 day rental:</p>
                   <p className="text-xl">
-                    $3000/<span className="text-[#A9A9A9]">Night</span>
+                    ${property.price_per_day}/
+                    <span className="text-[#A9A9A9]">Night</span>
                   </p>
                 </div>
                 <div className="">
                   <p className="text-xl">Week rental:</p>
                   <p className="text-xl">
-                    $2000/<span className="text-[#A9A9A9]">Night</span>
+                    ${property.price_per_week}/
+                    <span className="text-[#A9A9A9]">Night</span>
                   </p>
                 </div>
               </div>

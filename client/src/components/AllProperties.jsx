@@ -18,10 +18,10 @@ const AllProperties = () => {
             <Link to={`/property/${property.id}`} key={property.id}>
               <div key={property.id} className="bg-[#f5f5f5]">
                 <img src={property.image} alt={property.name} />
-                <h1 className="text-xl">{property.name}</h1>
+
                 <div className="flex justify-between p-6">
-                  <p>{property.description}</p>
-                  <p>{property.price}</p>
+                  <h1 className="text-xl">{property.name}</h1>
+                  <p className="text-xl">{property.price}Ksh</p>
                 </div>
                 <p className="pl-6">{property.address}</p>
                 <p className="pl-6">{property.description}</p>
