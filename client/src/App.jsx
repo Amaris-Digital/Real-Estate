@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import Favourites from "./components/Favourites";
 import Home from "./components/Home";
 import AdminDashBoard from "./components/AdminDashboard";
+import AddProperty from "./components/AddProperty";
 
 function App() {
   const [storedToken, setStoredToken] = useState(localStorage.getItem("token"));
@@ -62,6 +63,7 @@ function App() {
                 element={<Property loggedInUserId={loggedInUserId} />}
               />
               <Route path="/favorites" element={<Favourites />} />
+              <Route path="/AddProperty" element={<AddProperty />} />
             </>
           ) : (
             <>

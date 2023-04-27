@@ -12,7 +12,7 @@ const AdminDashBoard = () => {
 
   return (
     <div className="pt-24">
-      <h1 className="text-center text-5xl font-bold">List of all Tenants</h1>
+      <h1 className="text-center text-5xl font-bold">List of all bookings</h1>
       <div class="relative overflow-x-auto w-[90%] mx-auto">
         <table class="w-full text-sm text-left  text-white">
           <thead class="text-xs white uppercase bg-gray-700 text-white">

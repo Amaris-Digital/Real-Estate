@@ -131,9 +131,12 @@ const Navbar = ({
                 </svg>
               </li>
               <li>
-                <a class="text-sm text-gray-400 hover:text-gray-500" href="#">
+                <Link
+                  class="text-sm text-gray-400 hover:text-gray-500"
+                  to="/AddProperty"
+                >
                   Add property
-                </a>
+                </Link>
               </li>
             </>
           ) : null}

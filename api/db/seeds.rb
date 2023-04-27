@@ -117,6 +117,7 @@ puts "Seding admin"
     User.create(
         username: "admin",
         password: "admin",
+        phone_number: "0700234543",
         email: "admin@gmail.com",
         role: "admin",
         first_name: "admin",
@@ -130,6 +131,7 @@ puts "Seding admin"
     User.create(
         username: "user1",
         password: "123456",
+        phone_number: "070004543",
         email: "userone@gmail.com",
         first_name: "user",
         last_name: "tow",
@@ -139,6 +141,7 @@ puts "Seding admin"
     User.create(
         username: "user2",
         password: "123456",
+        phone_number: "070004543",
         email: "usertwo@gmail.com",
         first_name: "user",
         last_name: "two",
